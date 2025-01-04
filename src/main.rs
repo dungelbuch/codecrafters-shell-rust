@@ -14,11 +14,8 @@ fn main() {
 
         // switch case for input 
         match input.trim() {
-            "exit" => {
-                // Exit the shell
-                break;
-            }
-            _ => {
+            "exit 0" => break,
+            &_ => {
                 println!("{}: command not found", input.trim());
             }
         }
