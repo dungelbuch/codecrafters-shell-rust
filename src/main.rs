@@ -10,4 +10,15 @@ fn main() {
     let stdin = io::stdin();
     let mut input = String::new();
     stdin.read_line(&mut input).unwrap();
+
+    // switch case for input 
+    match input.trim() {
+        "exit" => {
+            println!("Exiting Shell!");
+        }
+        _ => {
+            println!("{}: command not found", input.trim());
+        }
+    }
+
 }
